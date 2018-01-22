@@ -1,0 +1,199 @@
+body {
+  background-color: #eee; }
+
+header {
+  width: 100%;
+  float: left;
+  margin-bottom: 7px; }
+
+#wrapper-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 0px 0px 12px 12px;
+  overflow: hidden; }
+  #wrapper-box .logo {
+    background: url(../imgs/guiabolso-logo.png) no-repeat left;
+    height: 1em;
+    padding-left: 15.5em;
+    padding-bottom: 5.2em;
+    transition: .4s;
+    float: left; }
+  #wrapper-box .logo-chuck {
+    background: url(../imgs/chucknorris.png) no-repeat left;
+    padding-left: 11.5em;
+    padding-bottom: 5.2em;
+    transition: .4s;
+    float: left; }
+  #wrapper-box img {
+    float: left;
+    margin-right: 14px;
+    margin-top: -3px; }
+  #wrapper-box .joke {
+    float: left;
+    clear: both;
+    margin: 20px 15px 27px 12px; }
+  #wrapper-box p {
+    width: 77%;
+    float: left; }
+  #wrapper-box .wrapper-category {
+    float: left;
+    margin-right: 14px;
+    margin-top: 10px;
+    width: 95%;
+    margin-bottom: 12px; }
+    #wrapper-box .wrapper-category h4 {
+      float: left;
+      margin-bottom: 3px;
+      margin-left: 15px;
+      margin-top: 0; }
+    #wrapper-box .wrapper-category .back {
+      float: right; }
+      #wrapper-box .wrapper-category .back a:link, #wrapper-box .wrapper-category .back a:visited {
+        background: #eee url(../imgs/arrow-back.png) no-repeat;
+        padding: 10px 18px 9px 32px;
+        border-radius: 25px;
+        background-position: 9px 8px;
+        text-decoration: none;
+        color: #555;
+        border: 2px solid white; }
+      #wrapper-box .wrapper-category .back a:hover {
+        background: #fff url(../imgs/arrow-back.png) no-repeat;
+        padding: 10px 18px 9px 42px;
+        background-position: 9px 8px;
+        border: 2px solid #267; }
+  #wrapper-box .reload {
+    background: #eee url(../imgs/reload.png) no-repeat;
+    padding: 23px;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-position: center center;
+    cursor: pointer; }
+  #wrapper-box .reload:hover {
+    border: 2px solid #267;
+    border-radius: 25px;
+    background: #fff url(../imgs/reload.png) no-repeat;
+    background-position: center center;
+    cursor: pointer; }
+  #wrapper-box ul {
+    float: left;
+    clear: both;
+    margin: 10px 0px 0px 0px;
+    padding: 11px 11px;
+    width: 88%; }
+    #wrapper-box ul li {
+      list-style-type: none; }
+    #wrapper-box ul li a:link, #wrapper-box ul li a:visited {
+      float: left;
+      background: #f0f0f0;
+      border: 2px solid white;
+      padding: 10px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-bottom: 14px;
+      text-decoration: none;
+      text-align: center;
+      color: #555;
+      margin-right: 10px; }
+    #wrapper-box ul li a:hover {
+      background: #fff;
+      border: 2px solid #267;
+      font-weight: normal; }
+  #wrapper-box .progress {
+    position: absolute;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: #acece6;
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0px; }
+    #wrapper-box .progress .indeterminate {
+      background-color: #78b0c7; }
+    #wrapper-box .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    #wrapper-box .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s; }
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+
+.jokes-enter {
+  opacity: 0.01; }
+
+.jokes-enter.jokes-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.jokes-leave {
+  opacity: 1; }
+
+.jokes-leave.jokes-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
