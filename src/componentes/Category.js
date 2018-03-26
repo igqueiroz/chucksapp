@@ -37,7 +37,7 @@ export default class Category extends Component {
                 {this.state.progress && <Progress />}
                 </ReactCSSTransitionGroup>
                 <Header />
-                <h4>Choose the Chuck Norris Category's Jokes:</h4>
+                <h4>Choose the Chuck Norris Category‘s Jokes:</h4>
                 <ul>
                 {
                     this.state.categories.map(categories => <CategoryItem key={categories} categories={categories} />)
